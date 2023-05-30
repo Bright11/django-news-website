@@ -1,3 +1,6 @@
+## project image
+![bright-python-news-website](https://github.com/Bright11/django-news-website/assets/34070274/18841b68-bf9b-42be-b921-117168c87ff8)
+
 ## Python django news website
 - is a simple project for news 
 - adding and deleting news with our powerful slider using owel
