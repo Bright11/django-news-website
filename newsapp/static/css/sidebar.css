@@ -1,0 +1,125 @@
+:root{
+    --primary-color:#F13454;
+}
+
+.siderbar{
+    width: 100%;
+}
+.left-section .siderbar form {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin: 20px 0px;
+    background: lightgray;
+}
+.left-section .siderbar form input{
+    padding: 14px;
+    width: 100%;
+    outline: 0;
+    border: 0;
+    border-radius: 10px 0px 0px 10px;
+    background: transparent;
+}
+.left-section .siderbar form  button{
+    padding: 8px;
+    background: var(--primary-color);
+    border: 0;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+}
+.sidebar-content h1{
+    margin: 0;
+    margin-bottom: 8px;
+    font-size: 16px;
+}
+.sidebar-content{
+    display: flex;
+    flex-direction: column;
+}
+.letset-sidebar{
+    margin-bottom: 10px;
+   
+}
+
+.sideberletstbox{
+    width: 250px;
+}
+.sideberletstbox img{
+width: 100%;
+height: 100px;
+object-fit: cover;
+border-radius: 6px;
+}
+
+.sideberletstbox p{
+    font-size: 12px;
+    color: black;
+    margin: 0;
+}
+
+.social-media-icons{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px 0px;
+    gap: 20px;
+}
+
+.social-media-icons a{
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+    padding: 8px;
+    border-radius: 100%;
+    background: var(--primary-color);
+}
+
+.social-media-icons a .fa-brands{
+    color: white;
+    font-size: 16px;
+}
+@media screen and (max-width: 767px){
+    .left-section{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+    }
+    .siderbar{
+        width: 100%;
+    }
+    .left-section .siderbar form {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        margin: 20px 0px;
+        background: lightgray;
+    }
+    .left-section .siderbar form input{
+        padding: 14px;
+        width: 100%;
+        outline: 0;
+        border: 0;
+        border-radius: 10px 0px 0px 10px;
+        background: transparent;
+    }
+    .left-section .siderbar form  button{
+        padding: 8px;
+        background: var(--primary-color);
+        border: 0;
+        color: white;
+        font-size: 24px;
+    }
+
+    .sidebar-content{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .sideberletstbox img {
+        width: 200px;
+    }
+}

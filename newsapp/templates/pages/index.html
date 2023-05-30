@@ -1,0 +1,170 @@
+{% extends 'layouts/based.html' %}
+
+{% block title %}
+{{ title}}
+{% endblock  %}
+{% block content %}
+<!-- 
+      </section> -->
+      {% include 'layouts/scrollnews.html' %}
+      <!-- top slider -->
+      <section class="slide-container">
+        <section class="section-slider">
+            <!-- Set up your HTML -->
+<div class="owl-carousel newssliderowl">
+    
+    {% for slide in newsslide %}
+    <div> 
+        <a href="">
+            {% if slide.pcimage %}
+                <img src="{{ slide.pcimage.url }}" alt="">
+             {% else %}
+             <img src="{{ slide.urlimage }}" alt="">
+                                
+            {% endif %}
+           <p>{{slide.name}}</p> 
+        </a>
+       </div>
+      
+    {% endfor %}
+        
+   
+     
+     
+    <!-- <div> Your Content </div>
+    <div> Your Content </div>
+    <div> Your Content </div>
+    <div> Your Content </div>
+    <div> Your Content </div>
+    <div> Your Content </div> -->
+  </div>
+        </section>
+        <section class="category-section">
+            <ul>
+                <li>
+                    <a href="">World news</a>
+                </li>
+                <li>
+                    <a href="">Sports news</a>
+                </li>
+                <li>
+                    <a href="">Politice</a>
+                </li>
+                <li>
+                    <a href="">Entertainment</a>
+                </li>
+            </ul>
+        </section>
+      </section>
+      <!-- the end -->
+    
+
+      <section class="content-section">
+        
+     
+            
+        
+       <div class="container-section">
+        <section class="right-section">
+           
+            <div class="right-contianer">
+            
+                {% for cat in catenews  %}
+                <div class="view-all">
+                    <button>{{cat.name}}</button>
+                    <a href="">View all</a>
+                </div> 
+                {% for news in cat.category.all  %}
+                
+                <div class="news-content">
+                    <a href="">
+                      
+                        <div class="news-img">
+                            
+                            {% if news.pcimage %}
+                            <img src="{{ news.pcimage.url }}" alt="">
+                           {% else %}
+                           <img src="{{ news.urlimage }}" alt="">
+                                
+                            {% endif %}
+                                
+                        </div>
+                        <div class="news-reporter">
+                            <h1>{{ news.created_by }}</h1>
+                            <h1>{{ news.created_at }}</h1>
+                        </div>
+                        <h2>{{ news.name }}</h2>
+                        {% comment %} <p>{{ news.name }}</p> {% endcomment %}
+                    </a>
+                </div>
+                {% endfor %}
+                    
+            {% endfor %}
+
+           
+
+
+        </div>
+
+        </section>
+<!--  -->
+        <section class="left-section">
+        <div class="siderbar">
+            <form action="">
+                <input type="text" placeholder="search for news">
+                <button><i class="fa-solid fa-magnifying-glass"></i></button>
+            </form>
+            <div class="sidebar-content">
+                <h1>Letest News</h1>
+                
+                {% for latest in latest  %}
+                <div class="letset-sidebar">
+                    <a href="">
+                        <div class="sideberletstbox">
+                           
+                            {% if latest.pcimage %}
+                            <img src="{{ latest.pcimage.url }}" alt="">
+                           {% else %}
+                           <img src="{{ latest.urlimage }}" alt="">
+                                
+                            {% endif %}
+                            
+                            <p>{{ latest.name }}</p>
+                           </div>
+                      </a>
+                </div>
+                {% endfor %}
+                    
+               
+
+                {% comment %} <div class="letset-sidebar">
+                    <a href="">
+                        <div class="sideberletstbox">
+                            <img src="https://themelooks.us/demo/usnews/html/img/home-img/world-news-03.jpg" alt="">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio aperiam eveniet commodi, quasi inventore .</p>
+                           </div>
+                      </a>
+                </div> {% endcomment %}
+                <div class="social-media-icons">
+                    <a href="">
+                        <i class="fa-brands fa-facebook"></i>
+                    </a>
+                    <a href="">
+                        <i class="fa-brands fa-twitter"></i>
+                    </a>
+                    <a href="">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <a href="">
+                        <i class="fa-brands fa-youtube"></i>
+                    </a>
+                 </div>
+            </div>
+        </div>
+        </section>
+       </div>
+      </section>
+
+
+
+      {% endblock  %}

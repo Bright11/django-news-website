@@ -1,0 +1,134 @@
+:root{
+    --primary-color:#F13454;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body,html{
+    overflow-x: hidden;
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+
+/* humburger */
+
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    padding: 8px 0px;
+    border-bottom: 1px solid grey;
+    margin: 0px 0px 50px 0;
+}
+.nav-ul{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 10px;
+}
+.nav-ul li{
+    padding: 8px;
+}
+.nav-ul li a{
+    color: gray;
+    font-size: 15px;
+    font-weight: 600;
+}
+.nav-ul li a:hover{
+    color: var( --primary-color);
+}
+.logo{
+    width: 50px;
+    height: 50px;
+}
+.logo img{
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+}
+
+.menu input{
+    display: none;
+    }
+@media only screen and (max-width: 768px) {
+    nav{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0px 0px 50px 0;
+    }
+    .menu{
+        display: flex;
+       flex-direction: column;
+       justify-content: space-between;
+       margin-top: 10px;
+       position: relative;
+       margin-bottom: 50px;
+      
+    }
+    .menu label{
+       left: 5px;
+       top: 0;
+        position: absolute;
+    }
+    .nav-ul{
+        visibility: hidden;
+        position: absolute;
+        top: 40px;
+        left: 0px;
+        width: 0px;
+        opacity: 0;
+        transition: width 2s ease-in-out, opacity 2s ease-in-out;
+        z-index: 99;
+        display: block;
+    }
+    
+ .nav-ul li{
+    background-color:var(--primary-color);
+    margin: 8px 0px;
+ }
+ .nav-ul li a{
+    color: white;
+    font-size: 15px;
+    font-weight: 600;
+}
+    input[type="checkbox" ]:checked +   .nav-ul{
+   
+    visibility: visible;
+    opacity:1;
+    width: 200px;
+    left:30px;
+    cursor: pointer;
+    
+    }
+    
+    
+    .menu label::after,.menu label::before{
+    content: "";
+    background-color:black;
+    padding: 3px 20px;
+    
+    
+    }
+    label{
+    display: flex;
+    flex-direction: column;
+    width: max-content;
+    gap: 5px;
+    border: 1px solid black;
+    }
+    .mobile-menu{
+    background-color: black;
+    padding: 3px 20px;
+    }
+  
+}
