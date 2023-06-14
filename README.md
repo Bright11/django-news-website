@@ -13,3 +13,5 @@
 ## how to clone and run this project
 - clone this project using git, create an envirnment virable and install django incase you encounter error durring runing this application
 - also activate this envirnment using runserver to start up the server
+
+## Category page added
