@@ -18,7 +18,12 @@
 
 .category-section{
     flex-basis: 20%;
-    
+    height: 300px !important;
+    overflow: hidden;
+}
+.category-section:hover{
+    overflow: scroll;
+    overflow-x: hidden;
 }
 .category-section ul li{
     box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
